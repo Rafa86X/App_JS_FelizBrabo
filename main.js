@@ -1,45 +1,41 @@
-const botaoFeliz = document.querySelector('[data-tipo="botao_feliz"]')
-const botaotriste = document.querySelector('[data-tipo="botao_triste"]')
-const Smile = document.querySelector('[data-tipo="imagem"]')
-const feliz_t =  document.querySelector('[data-tipo="botao_togle"]')
+const botaoFeliz = document.querySelector('[data-tipo="botao_feliz"]');
+const botaoTriste = document.querySelector('[data-tipo="botao_triste"]');
+const smile = document.querySelector('[data-tipo="imagem"]');
+const felizToggle = document.querySelector('[data-tipo="botao_togle"]');
 
-
-
-function botao_togle(){
-    if(!tabrabo()){
-        if(Smile.src.indexOf('triste')>-1)
-          {Smile.src="./imagens/feliz.png"}
-        else
-        {Smile.src="./imagens/triste.png"}
+function botaoToggle() {
+    if (!tabrabo()) {
+        if (smile.src.includes('triste')) {
+            smile.src = "./imagens/feliz.png";
+        } else {
+            smile.src = "./imagens/triste.png";
+        }
     }
 }
 
-
-function tabrabo(){
-    return Smile.src.indexOf('brabo')>-1
+function tabrabo() {
+    return smile.src.includes('brabo');
 }
 
-function setaImgFeliz (){
-    if(!tabrabo())
-    Smile.src="./imagens/feliz.png"
-  }
+function setaImgFeliz() {
+    if (!tabrabo()) {
+        smile.src = "./imagens/feliz.png";
+    }
+}
 
+function setaImgTriste() {
+    if (!tabrabo()) {
+        smile.src = "./imagens/triste.png";
+    }
+}
 
-function setaImgTriste (){
-    if(!tabrabo())
-    Smile.src="./imagens/triste.png"
-  }
+function setaImgBrabo() {
+    smile.src = "./imagens/brabo.png";
+}
 
-function setaImgBrabo (){
-    Smile.src="./imagens/brabo.png"
-} 
-
-
-botaoFeliz.addEventListener('click', setaImgFeliz)
-botaotriste.addEventListener('click', setaImgTriste)
-feliz_t.addEventListener('click', botao_togle)
-Smile.addEventListener('mouseover', setaImgFeliz)
-Smile.addEventListener('mouseleave', setaImgTriste)
-Smile.addEventListener('dblclick', setaImgBrabo)
-
-
+botaoFeliz.addEventListener('click', setaImgFeliz);
+botaoTriste.addEventListener('click', setaImgTriste);
+felizToggle.addEventListener('click', botaoToggle);
+smile.addEventListener('mouseover', setaImgFeliz);
+smile.addEventListener('mouseleave', setaImgTriste);
+smile.addEventListener('dblclick', setaImgBrabo);
