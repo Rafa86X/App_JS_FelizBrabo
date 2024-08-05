@@ -2,7 +2,7 @@
   "name": "feliz_brabo",
   "version": "1.0.0",
   "description": "Projeto do bytebank para seus clientes",
-  "main": "main.js",
+  "main": "mainv.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
