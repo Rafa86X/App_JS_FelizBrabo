@@ -1,10 +1,10 @@
 const botaoFeliz = document.querySelector('[data-tipo="botao_feliz"]');
 const botaoTriste = document.querySelector('[data-tipo="botao_triste"]');
 const smile = document.querySelector('[data-tipo="imagem"]');
-const felizToggle = document.querySelector('[data-tipo="botao_togle"]');
+const toggleBotao = document.querySelector('[data-tipo="botao_toggle"]');
 
-function botaoToggle() {
-    if (!tabrabo()) {
+function toggleImagem() {
+    if (!isBrabo()) {
         if (smile.src.includes('triste')) {
             smile.src = "./imagens/feliz.png";
         } else {
@@ -13,18 +13,18 @@ function botaoToggle() {
     }
 }
 
-function tabrabo() {
+function isBrabo() {
     return smile.src.includes('brabo');
 }
 
 function setaImgFeliz() {
-    if (!tabrabo()) {
+    if (!isBrabo()) {
         smile.src = "./imagens/feliz.png";
     }
 }
 
 function setaImgTriste() {
-    if (!tabrabo()) {
+    if (!isBrabo()) {
         smile.src = "./imagens/triste.png";
     }
 }
@@ -35,7 +35,8 @@ function setaImgBrabo() {
 
 botaoFeliz.addEventListener('click', setaImgFeliz);
 botaoTriste.addEventListener('click', setaImgTriste);
-felizToggle.addEventListener('click', botaoToggle);
+toggleBotao.addEventListener('click', toggleImagem);
 smile.addEventListener('mouseover', setaImgFeliz);
 smile.addEventListener('mouseleave', setaImgTriste);
 smile.addEventListener('dblclick', setaImgBrabo);
+
