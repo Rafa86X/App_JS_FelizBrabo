@@ -18,11 +18,10 @@ function isBrabo() {
 }
 
 function setaImgFeliz() {
-    console.log("aiaiarrr");
+    console.log("aiaiarrr1");
     
-    if (!isBrabo()) {
+
         smile.src = "./imagens/feliz.png";
-    }
 }
 
 function setaImgTriste() {
