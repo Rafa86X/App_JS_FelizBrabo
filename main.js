@@ -18,6 +18,8 @@ function isBrabo() {
 }
 
 function setaImgFeliz() {
+    console.log("aiaia");
+    
     if (!isBrabo()) {
         smile.src = "./imagens/feliz.png";
     }
