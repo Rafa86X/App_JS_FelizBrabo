@@ -32,6 +32,7 @@ function setaImgTriste() {
 }
 
 function setaImgBrabo() {
+    console.log("oioioi");
     smile.src = "./imagens/brabo.png";
 }
 
