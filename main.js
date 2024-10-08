@@ -18,10 +18,10 @@ function isBrabo() {
 }
 
 function setaImgFeliz() {
-    console.log("aiaia");
+    console.log("aiaiarrr");
     
     if (!isBrabo()) {
-        smile.src = "./imagens/brabo.png";
+        smile.src = "./imagens/feliz.png";
     }
 }
 
@@ -32,7 +32,7 @@ function setaImgTriste() {
 }
 
 function setaImgBrabo() {
-    console.log("oioioi");
+    console.log("oioioirr");
     smile.src = "./imagens/brabo.png";
 }
 
@@ -41,5 +41,5 @@ botaoTriste.addEventListener('click', setaImgTriste);
 toggleBotao.addEventListener('click', toggleImagem);
 smile.addEventListener('mouseover', setaImgFeliz);
 smile.addEventListener('mouseleave', setaImgTriste);
-smile.addEventListener('dblclick', setaImgBrabo);
+smile.addEventListener('dblclick', setaImgFeliz);
 
