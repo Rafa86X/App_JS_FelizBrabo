@@ -21,7 +21,7 @@ function setaImgFeliz() {
     console.log("aiaia");
     
     if (!isBrabo()) {
-        smile.src = "./imagens/feliz.png";
+        smile.src = "./imagens/brabo.png";
     }
 }
 
